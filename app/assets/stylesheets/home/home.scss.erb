@@ -4,6 +4,11 @@
 	.section {
 		text-align: center;
 
+		h1, h2 {
+			max-width: 800px;
+			margin: auto;
+		}
+
 		h1 {
 			font-size: 100px;		
 			font-weight: 900;
@@ -15,6 +20,7 @@
 		    font-weight: 400;
 		    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 		    margin-top: 26px;
+		    line-height: 30px;
 		}
 
 		.quote {
@@ -52,18 +58,19 @@
 	}
 
 
-	.section:nth-of-type(1) {
+	.section.home {
 		background-color: #0E9EB9;
 		color: #007186;
 	}
 
 
-	.section:nth-of-type(2) {
+	.section.about-me {
 		background-color: #E36C3C;
 		color: #CD3A00;
 	}
 
-	.section:nth-of-type(3) {
+
+	.section.coding-buzz {
 		background-color: #CD9DBF;
 		color: #8E2B70;
 
@@ -73,19 +80,50 @@
 	}
 
 
-	.section:nth-of-type(4) {
+	.section.work-home {
 		background: #1BBC9B;
 		color: #009679;	
 	}
 
 
-	.section:nth-of-type(5) {
+	.section.work {
+		background: #009A94;
+		color: #007772;
+
+		h2 {
+			margin-bottom: 20px;
+		}
+
+		a {
+			color: #007772;
+			font-size: 20px;
+			line-height: 25px;
+			text-align: center;
+		    font-weight: 400;
+		    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
+		    
+		}	
+	}
+
+
+	.section.contact-me {
 		background: #FFCD13;
 		color: #D1A400;
 	}
 }
 
 
-body #fp-nav ul li a span {
-	background-color: rgba(255, 255, 255, .55);
+body {
+	#fp-nav ul li a span, .fp-slidesNav ul li a span {
+		background-color: rgba(255, 255, 255, .55);
+	}
+
+	.fp-controlArrow.fp-prev {
+		border-color: transparent rgba(255, 255, 255, .55) transparent transparent;
+	}
+
+	.fp-controlArrow.fp-next {
+		border-color: transparent transparent transparent rgba(255, 255, 255, .55);
+		right: 55px;
+	}
 }
