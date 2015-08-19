@@ -5,6 +5,7 @@ $(document).ready(function() {
 		loopHorizontal: true,
 		slidesNavigation: true,
         slidesNavPosition: 'bottom',
-        css3: false
+        css3: false,
+        responsiveHeight: 543
     });
 });

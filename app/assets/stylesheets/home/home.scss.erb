@@ -1,3 +1,8 @@
+@mixin engraved-text() {
+	text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0, 0, 0, .7);
+}
+
+
 #homepage {
 	font-family: 'Roboto', sans-serif;
 
@@ -7,18 +12,17 @@
 		h1, h2 {
 			max-width: 900px;
 			margin: auto;
+			@include engraved-text();
 		}
 
 		h1 {
 			font-size: 100px;		
 			font-weight: 900;
-			text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
 		}
 
 		h2  {
 			font-size: 26px;
 		    font-weight: 400;
-		    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 		    margin-top: 26px;
 		    line-height: 30px;
 		}
@@ -29,7 +33,7 @@
 
 		.image-text-content {
 			display: table;
-			margin: auto;
+			margin: 30px auto auto auto;
 
 			.text-holder, .image-holder {
 				display: table-cell;
@@ -42,9 +46,15 @@
 				line-height: 25px;
 				text-align: justify;
 			    font-weight: 400;
-			    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
-			    padding-left: 50px;
-			    padding-right: 50px;
+			    @include engraved-text();
+			    
+			    &.left {
+					padding-right: 50px;
+			    }
+
+			    &.right {
+			    	padding-left: 50px;
+			    }
 
 			    p {
 			    	margin-bottom: 10px;
@@ -65,7 +75,7 @@
 
 
 	.section.about-me {
-		background-color: #E36C3C;
+		background-color: #FC8F64;
 		color: #CD3A00;
 	}
 
@@ -100,14 +110,13 @@
 			line-height: 25px;
 			text-align: center;
 		    font-weight: 400;
-		    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
-		    
+		    @include engraved-text();
 		}	
 	}
 
 
 	.section.contact-me {
-		background: #FFCD13;
+		background: #FFE06C;
 		color: #D1A400;
 
 		a {
@@ -120,9 +129,20 @@
 
 		.icon {
 			font-size: 80px;
-		    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
+		    @include engraved-text();
 		    margin: 15px;
 		}
+	}
+}
+
+
+@media all and (max-height: 543px) {
+	#homepage .section {
+		padding: 40px 0px;
+	}
+
+	body .fp-controlArrow.fp-next {
+		right: 15px !important;
 	}
 }
 
