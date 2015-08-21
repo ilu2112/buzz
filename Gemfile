@@ -45,3 +45,4 @@ end
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
+gem 'newrelic_rpm'
